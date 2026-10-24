@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Discover St. Mary's Seminary Senior High School, Lolobi — SMASCO. Explore our school, facilities, and achievements.">
+<title>SMASCO | St. Mary's Seminary SHS, Lolobi</title>
+<style>
+:root{--navy:#071b3a;--blue:#123e73;--gold:#f4c542;--cream:#f7f8fc;--ink:#18243a;--muted:#637087;--white:#fff}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65}
+a{color:inherit;text-decoration:none}
+header{position:sticky;top:0;z-index:20;background:rgba(7,27,58,.97);color:white;box-shadow:0 6px 24px #071b3a22}
+.nav{max-width:1150px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.8px}
+.crest{width:44px;height:44px;border-radius:14px;background:var(--gold);color:var(--navy);display:grid;place-items:center;font-weight:1000;font-size:18px}
+nav{display:flex;gap:24px;align-items:center;font-size:.95rem}
+nav a:hover{color:var(--gold)}
+.menu-btn{display:none;background:transparent;color:white;border:1px solid #ffffff55;border-radius:9px;padding:8px 12px;font-size:1rem}
+.hero{position:relative;overflow:hidden;background:radial-gradient(circle at 80% 20%,#285e9b 0,transparent 35%),linear-gradient(120deg,#071b3a,#123e73);color:white;padding:95px 22px 100px}
+.hero:after{content:"";position:absolute;width:390px;height:390px;border:55px solid #ffffff0c;border-radius:50%;right:-80px;bottom:-210px}
+.hero-inner{max-width:1150px;margin:auto;position:relative;z-index:1}
+.eyebrow{display:inline-block;color:var(--gold);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:.78rem}
+h1{font-size:clamp(2.5rem,6vw,5rem);line-height:1.05;max-width:780px;margin:18px 0}
+.hero p{font-size:1.15rem;color:#e1e9f6;max-width:660px}
+.actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:28px}
+.btn{display:inline-block;padding:13px 21px;border-radius:999px;font-weight:800;transition:.2s}
+.btn:hover{transform:translateY(-3px)}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-outline{border:1px solid #ffffff88;color:white}
+.stats{max-width:1000px;margin:-35px auto 0;position:relative;z-index:2;padding:0 20px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.stat{background:white;padding:23px;border-radius:18px;box-shadow:0 12px 30px #071b3a12;text-align:center}
+.stat strong{display:block;color:var(--blue);font-size:1.3rem}
+.stat span{color:var(--muted);font-size:.9rem}
+section{padding:76px 22px}
+.container{max-width:1100px;margin:auto}
+.section-head{text-align:center;max-width:720px;margin:0 auto 38px}
+.section-head .eyebrow{color:#9b7200}
+h2{font-size:clamp(1.8rem,4vw,2.7rem);line-height:1.2;margin:10px 0 13px;color:var(--navy)}
+.section-head p,.about-copy p{color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}
+.about-panel{background:white;border-radius:24px;padding:30px;box-shadow:0 15px 40px #071b3a0c}
+.about-panel h3{margin-top:0;color:var(--blue)}
+.highlight{border-left:4px solid var(--gold);padding-left:17px;margin-top:22px}
+.values{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:22px}
+.value{background:#eef3fa;padding:15px;border-radius:12px;font-weight:750}
+.facilities{background:#edf2f9}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:white;border-radius:18px;overflow:hidden;box-shadow:0 10px 28px #071b3a0c;transition:.25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 34px #071b3a18}
+.card-visual{height:145px;display:grid;place-items:center;background:linear-gradient(135deg,#123e73,#071b3a);color:var(--gold);font-size:3rem}
+.card-body{padding:20px}
+.card h3{margin:0 0 8px;color:var(--navy)}
+.card p{margin:0;color:var(--muted);font-size:.93rem}
+.achievement{background:linear-gradient(120deg,#071b3a,#123e73);color:white}
+.achievement .section-head h2{color:white}
+.achievement .section-head p{color:#dce6f5}
+.achievement-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center}
+.achievement-box{padding:28px;border:1px solid #ffffff25;border-radius:20px;background:#ffffff0b}
+.achievement-box h3{color:var(--gold);font-size:1.35rem;margin-top:0}
+.achievement-box p{color:#e1e9f6}
+.gallery-note{background:white;border-radius:18px;padding:24px;border:1px dashed #b6c4d8;color:var(--muted)}
+.gallery-note strong{color:var(--navy)}
+.cta{text-align:center;background:var(--gold);color:var(--navy);padding:58px 22px}
+.cta h2{color:var(--navy)}
+.cta p{max-width:650px;margin:0 auto 20px}
+footer{background:#041329;color:#d7e1f0;padding:35px 22px}
+.footer-inner{max-width:1100px;margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer small{color:#9fb0c8}
+.reveal{animation:rise .7s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:850px){.cards{grid-template-columns:repeat(2,1fr)}.about-grid,.achievement-grid{grid-template-columns:1fr}nav{gap:13px}}
+@media(max-width:620px){.nav{flex-wrap:wrap}.menu-btn{display:block}nav{display:none;width:100%;flex-direction:column;align-items:flex-start;padding:10px 0 5px}nav.open{display:flex}.hero{padding:70px 20px 80px}.stats{grid-template-columns:1fr;margin-top:-25px}.cards{grid-template-columns:1fr}.values{grid-template-columns:1fr}section{padding:58px 18px}.stat{padding:17px}}
+</style>
+</head>
+<body>
+<header>
+ <div class="nav">
+  <a class="brand" href="#home"><span class="crest">S</span><span>SMASCO <small style="display:block;font-size:.68rem;font-weight:500;letter-spacing:.3px;color:#c9d7ec">ST. MARY'S SEMINARY SHS</small></span></a>
+  <button class="menu-btn" aria-label="Open navigation" onclick="document.querySelector('nav').classList.toggle('open')">☰ Menu</button>
+  <nav>
+   <a href="#home">Home</a><a href="#about">About</a><a href="#facilities">Facilities</a><a href="#achievements">Achievements</a>
+  </nav>
+ </div>
+</header>
+<main>
+<section class="hero" id="home">
+ <div class="hero-inner reveal">
+  <span class="eyebrow">Welcome to our school</span>
+  <h1>Excellence, Character &amp; Discovery.</h1>
+  <p>Welcome to St. Mary's Seminary Senior High School, Lolobi — proudly known as SMASCO. Explore our learning environment, facilities, and school story.</p>
+  <div class="actions"><a class="btn btn-gold" href="#about">Discover SMASCO ↗</a><a class="btn btn-outline" href="#facilities">Explore facilities</a></div>
+ </div>
+</section>
+<div class="stats">
+ <div class="stat"><strong>Learning</strong><span>Building knowledge and skills</span></div>
+ <div class="stat"><strong>Community</strong><span>Growing together at Lolobi</span></div>
+ <div class="stat"><strong>Ambition</strong><span>Working towards excellence</span></div>
+</div>
+<section id="about">
+ <div class="container about-grid">
+  <div class="about-copy">
+   <span class="eyebrow">About SMASCO</span>
+   <h2>A place to learn, grow and achieve.</h2>
+   <p>St. Mary's Seminary Senior High School (SMASCO) is located at Lolobi in the Oti Region of Ghana. The school is described in the original website as a Category B, single-sex school.</p>
+   <p>SMASCO aims to provide students with an environment where they can develop their knowledge, talents, discipline, and confidence.</p>
+   <div class="highlight"><strong>Our school story</strong><br>Education opens doors. At SMASCO, every lesson and every opportunity can help students prepare for the future.</div>
+  </div>
+  <div class="about-panel">
+   <h3>Welcome to SMASCO</h3>
+   <p>Explore the website to learn about the school and its facilities.</p>
+   <div class="values"><div class="value">📘 Learning</div><div class="value">🤝 Community</div><div class="value">🔬 Discovery</div><div class="value">🌟 Excellence</div></div>
+  </div>
+ </div>
+</section>
+<section class="facilities" id="facilities">
+ <div class="container">
+  <div class="section-head"><span class="eyebrow">Our campus</span><h2>Facilities that support learning</h2><p>Discover some of the facilities mentioned on the SMASCO website.</p></div>
+  <div class="cards">
+   <article class="card"><div class="card-visual">⚗️</div><div class="card-body"><h3>Science Laboratory</h3><p>A space for practical science activities, experiments, and discovery.</p></div></article>
+   <article class="card"><div class="card-visual">💻</div><div class="card-body"><h3>IT Laboratory</h3><p>A learning space for developing computer and digital skills.</p></div></article>
+   <article class="card"><div class="card-visual">🏫</div><div class="card-body"><h3>Classroom Blocks</h3><p>Classrooms provide spaces for lessons, discussion, and collaboration.</p></div></article>
+   <article class="card"><div class="card-visual">🛏️</div><div class="card-body"><h3>Dormitories</h3><p>Boarding accommodation is one of the campus facilities listed.</p></div></article>
+  </div>
+ </div>
+</section>
+<section class="achievement" id="achievements">
+ <div class="container">
+  <div class="section-head"><span class="eyebrow">School achievements</span><h2>Celebrating curiosity and effort</h2><p>Encouraging students to explore ideas, solve problems, and take part in academic activities.</p></div>
+  <div class="achievement-grid">
+   <div class="achievement-box"><h3>National Science &amp; Maths Quiz</h3><p>The original website notes that SMASCO participates in the National Science and Maths Quiz (NSMQ) and reached the national level in 2024.</p></div>
+   <div class="achievement-box"><h3>Looking to the future</h3><p>Keep learning, keep asking questions, and keep representing your school with pride.</p></div>
+  </div>
+ </div>
+</section>
+<section id="gallery">
+ <div class="container">
+  <div class="section-head"><span class="eyebrow">Campus gallery</span><h2>See SMASCO in pictures</h2><p>Add your own school photographs to make this section personal and authentic.</p></div>
+  <div class="gallery-note"><strong>How to add your photos:</strong> place your images in the same folder as this HTML file, then add image elements using their exact filenames. For example, use <code>&lt;img src="smasco.png" alt="SMASCO campus"&gt;</code>. Keep the filenames and letter cases exactly the same.</div>
+ </div>
+</section>
+<section class="cta">
+ <div class="container"><h2>SMASCO — proud to learn, ready to grow.</h2><p>Thank you for visiting our school website. Explore the sections above to learn more about our campus and school community.</p><a class="btn" style="background:var(--navy);color:white" href="#home">Back to top ↑</a></div>
+</section>
+</main>
+<footer><div class="footer-inner"><div><strong>SMASCO</strong><br><small>St. Mary's Seminary Senior High School, Lolobi, Ghana</small></div><small>School website concept • Built with HTML &amp; CSS</small></div></footer>
+</body>
+</html>
